@@ -1,12 +1,10 @@
 /* eslint-disable react/no-children-prop */
-import * as Style from './components/Button/Button';
+import * as Style from './components/Input/Input';
 
 function App() {
   return (
     <div className="App">
-      <Style.Button color="primary" size="small">
-        hi
-      </Style.Button>
+      <Style.Input placeholder="뭐" />
     </div>
   );
 }
