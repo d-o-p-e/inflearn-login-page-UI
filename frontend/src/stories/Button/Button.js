@@ -11,15 +11,12 @@ export function Button({ color, children, size, round, ...props }) {
 
 Button.propTypes = {
   color: PropTypes.string,
-  backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['default', 'wide']),
-  round: PropTypes.oneOf(['round', 'rounder']),
-  label: PropTypes.string.isRequired,
+  round: PropTypes.oneOf(['none', 'round', 'rounder']),
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
   color: 'primary',
   size: 'default',
   round: 'none',

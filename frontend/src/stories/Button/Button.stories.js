@@ -28,7 +28,6 @@ function Template(args) {
 export const Primary = Template.bind({});
 Primary.args = {
   color: 'primary',
-  label: 'Button',
   children: 'Button Test',
 };
 
@@ -41,14 +40,12 @@ Secondary.args = {
 export const wide = Template.bind({});
 wide.args = {
   size: 'wide',
-  label: 'Button',
   children: 'Button Test',
 };
 
 export const Round = Template.bind({});
 Round.args = {
   round: 'round',
-  label: 'Button',
   children: 'Button Test',
 };
 
