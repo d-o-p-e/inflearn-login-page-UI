@@ -18,13 +18,21 @@ const sizeCss = {
 const colorCss = {
   primary: css`
   color: white;
-  background-color: #1ea7fd;
+  background-color: #00C471;
   `,
   secondary: css`
   color: #333;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   `,
+};
+const roundCss = {
+  default: css`
+  border-radius: 0.125rem;
+`,
+  round: css`
+  border-radius: 0.5rem;
+`,
 };
 
 export const StoryBookButton = styled.button`
@@ -35,11 +43,8 @@ export const StoryBookButton = styled.button`
   cursor: pointer;
   display: inline-block;
   line-height: 1;
-  ${({ size }) => (
-    sizeCss[size]
-  )}
-  ${({ color }) => {
-    console.log(color);
-    return colorCss[color];
-  }}
+  ${({ size }) => sizeCss[size]}
+  ${({ color }) => colorCss[color]}
+  ${({ round }) => (round ? roundCss.round : roundCss.default)}
+  width:${({ width }) => width}
 `;
