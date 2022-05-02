@@ -23,9 +23,11 @@
   ],
   "plugins": [
     "import",
-    "react-hooks"
+    "react-hooks",
+    "better-styled-components"
   ],
   "rules": {
+    "better-styled-components/sort-declarations-alphabetically": 2,
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "no-console": "off",
