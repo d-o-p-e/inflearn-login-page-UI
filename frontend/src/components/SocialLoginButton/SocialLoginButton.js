@@ -32,6 +32,3 @@ SocialLoginButton.propTypes = {
    */
   onClick: PropTypes.func,
 };
-
-SocialLoginButton.defaultProps = {
-};
