@@ -1,10 +1,31 @@
 /* eslint-disable react/no-children-prop */
+import { useState } from 'react';
 import { Button } from './stories/Button/Button';
+import Input from './stories/Input/Input';
+import PasswordInput from './stories/Input/PasswordInput';
 
 function App() {
+  const [status, setStatus] = useState('default');
+  const [message, setMessage] = useState('');
+
+  const onClickHandler = () => {
+    if (status === 'success') {
+      setStatus('error');
+      setMessage('사용 불가능한 아이디입니다.');
+    } else {
+      setStatus('success');
+      setMessage('사용 가능한 아이디입니다.');
+    }
+  };
+
   return (
     <div className="App">
-      <Button color="primary" size="wide" children="로그인" />
+      <form>
+        <Input type="email" placeholder="example@inflab.com" status={status} message={message} label="이메일" />
+        <PasswordInput placeholder="******" label="비밀번호" />
+        <PasswordInput placeholder="******" label="비밀번호 확인" />
+      </form>
+      <Button color="primary" size="wide" round="round" children="로그인" onClick={onClickHandler} />
     </div>
   );
 }
