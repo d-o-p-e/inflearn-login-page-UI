@@ -19,12 +19,14 @@ function Template(args) {
 export const PasswordInputStory = Template.bind({});
 PasswordInputStory.args = {
   type: 'password',
+  label: '비밀번호',
   placeholder: '비밀번호',
 };
 
 export const ErrorPasswordInputStory = Template.bind({});
 ErrorPasswordInputStory.args = {
   type: 'password',
+  label: '비밀번호',
   placeholder: '비밀번호',
   status: 'error',
   message: '불가능한 비밀번호입니다.',
@@ -33,6 +35,7 @@ ErrorPasswordInputStory.args = {
 export const SuccessPasswordStory = Template.bind({});
 SuccessPasswordStory.args = {
   type: 'password',
+  label: '비밀번호',
   placeholder: '비밀번호',
   status: 'success',
   message: '사용가능한 비밀번호입니다.',

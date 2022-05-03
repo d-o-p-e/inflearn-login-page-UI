@@ -19,12 +19,14 @@ function Template(args) {
 export const EmailInputStory = Template.bind({});
 EmailInputStory.args = {
   type: 'email',
+  label: '이메일',
   placeholder: '이메일',
 };
 
 export const ErrorInputStory = Template.bind({});
 ErrorInputStory.args = {
   type: 'email',
+  label: '이메일',
   placeholder: '이메일',
   status: 'error',
   message: '불가능한 이메일입니다.',
@@ -33,6 +35,7 @@ ErrorInputStory.args = {
 export const SuccessInputStory = Template.bind({});
 SuccessInputStory.args = {
   type: 'email',
+  label: '이메일',
   placeholder: '이메일',
   status: 'success',
   message: '사용가능한 이메일입니다.',
