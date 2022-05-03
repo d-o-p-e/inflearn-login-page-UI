@@ -24,16 +24,16 @@ PasswordInputStory.args = {
 
 export const ErrorPasswordInputStory = Template.bind({});
 ErrorPasswordInputStory.args = {
-  type: 'email',
-  placeholder: '이메일',
+  type: 'password',
+  placeholder: '비밀번호',
   status: 'error',
   message: '불가능한 비밀번호입니다.',
 };
 
 export const SuccessPasswordStory = Template.bind({});
 SuccessPasswordStory.args = {
-  type: 'email',
-  placeholder: '이메일',
+  type: 'password',
+  placeholder: '비밀번호',
   status: 'success',
   message: '사용가능한 비밀번호입니다.',
 };
