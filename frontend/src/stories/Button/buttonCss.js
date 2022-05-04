@@ -2,40 +2,46 @@ import styled, { css } from 'styled-components';
 
 const sizeCss = {
   default: css`
-  font-size: 14px;
-  padding: 16px;
+    font-size: 14px;
+    padding: 16px;
   `,
   wide: css`
-  font-size: 14px;
-  padding: 16px;
-  width: 270px;
-  letter-spacing: -1px;
+    font-size: 14px;
+    padding: 16px;
+    width: 270px;
+    letter-spacing: -1px;
+  `,
+  maxWidth: css`
+    font-size: 14px;
+    padding: 16px;
+    width: 100%;
+    letter-spacing: -1px;
   `,
 };
 
 const colorCss = {
   primary: css`
-  color: white;
-  background-color: rgba(25, 196, 115);
-  &:active {
-    background-color: rgba(20, 163, 95);
-  }
+    color: white;
+    background-color: rgba(25, 196, 115);
+    &:active {
+      background-color: rgba(20, 163, 95);
+    }
   `,
   secondary: css`
-  color: #333;
-  background-color: transparent;
-  &:active {
-    background-color: #eee;
-  }
+    color: #333;
+    background-color: transparent;
+    &:active {
+      background-color: #eee;
+    }
   `,
 };
 
 const roundCss = {
   round: css`
-  border-radius: 4px;
+    border-radius: 4px;
   `,
   rounder: css`
-  border-radius: 10px;
+    border-radius: 10px;
   `,
 };
 
