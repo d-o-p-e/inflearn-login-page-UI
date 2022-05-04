@@ -11,7 +11,7 @@ export default {
       control: { type: 'radio' },
     },
     size: {
-      options: ['default', 'wide'],
+      options: ['default', 'wide', 'maxWidth'],
       control: { type: 'radio' },
     },
     round: {
@@ -40,6 +40,12 @@ Secondary.args = {
 export const wide = Template.bind({});
 wide.args = {
   size: 'wide',
+  children: 'Button Test',
+};
+
+export const maxWidth = Template.bind({});
+maxWidth.args = {
+  size: 'maxWidth',
   children: 'Button Test',
 };
 

@@ -20,12 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <form>
+      <form style={{ width: '500px' }}>
         <Input type="email" placeholder="example@inflab.com" status={status} message={message} label="이메일" />
         <PasswordInput placeholder="******" label="비밀번호" />
         <PasswordInput placeholder="******" label="비밀번호 확인" />
+        <Button color="primary" size="maxWidth" round="round" children="로그인" onClick={onClickHandler} />
       </form>
-      <Button color="primary" size="wide" round="round" children="로그인" onClick={onClickHandler} />
     </div>
   );
 }
