@@ -11,7 +11,7 @@ export function Button({ color, children, size, round, ...props }) {
 
 Button.propTypes = {
   color: PropTypes.string,
-  size: PropTypes.oneOf(['default', 'wide']),
+  size: PropTypes.oneOf(['default', 'wide', 'maxWidth']),
   round: PropTypes.oneOf(['none', 'round', 'rounder']),
   onClick: PropTypes.func,
 };
