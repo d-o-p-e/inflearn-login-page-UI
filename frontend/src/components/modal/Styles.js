@@ -2,22 +2,21 @@ import styled from 'styled-components';
 
 export const Overlay = styled.div`
   background: rgba(11,19,30,.37);
-  display: ${({ status }) => (status ? 'flex' : 'none')}; /* Sit on top */
+  display: ${({ status }) => (status ? 'flex' : 'none')}; 
   left: 0;
-  overflow: auto; /* Full width */
-  position: fixed; /* Full height */
-  top: 0; /* Enable scroll if needed */
-  width: 100%; /* Fallback color */
-  z-index: 5; /* Black w/ opacity */
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 5; 
   justify-content: center;
   height: 100%;
   align-items: center;
   backdrop-filter: blur(2px);
+  
 `;
 
 export const Modal = styled.div`
   display: flex;
-  justify-content: space-between;
   min-width: 320px;
   max-width: 768px;
   flex-direction: column;
