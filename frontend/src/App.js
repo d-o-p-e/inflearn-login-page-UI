@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button } from './stories/Button/Button';
 import Input from './stories/Input/Input';
 import PasswordInput from './stories/Input/PasswordInput';
+import { SocialAuthButton } from './stories/SocialAuthButton/SocialAuthButton';
 
 function App() {
   const [status, setStatus] = useState('default');
@@ -26,6 +27,11 @@ function App() {
         <PasswordInput placeholder="******" label="비밀번호 확인" />
         <Button color="primary" size="maxWidth" round="round" children="로그인" onClick={onClickHandler} />
       </form>
+      <SocialAuthButton icon="github" />
+      <SocialAuthButton icon="apple" />
+      <SocialAuthButton icon="google" />
+      <SocialAuthButton icon="facebook" />
+      <SocialAuthButton icon="kakaotalk" />
     </div>
   );
 }
