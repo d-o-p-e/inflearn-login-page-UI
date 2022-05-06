@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const ModalWrapper = styled.div`
-  display: ${({ open }) => (open ? 'flex' : 'none')};
+  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   right: 0;

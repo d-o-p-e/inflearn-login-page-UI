@@ -7,10 +7,9 @@ import PasswordInput from '../../stories/Input/PasswordInput';
 
 function Main() {
   const [isOpen, setOpen] = useState(false);
-
   return (
     <>
-      <Modal open={isOpen} onClose={() => { setOpen(false); }} showCloseButton>
+      <Modal isOpen={isOpen} onClose={() => { setOpen(false); }}>
         <Modal.Header>
           <h2>로그인</h2>
         </Modal.Header>

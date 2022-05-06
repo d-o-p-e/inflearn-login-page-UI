@@ -2,9 +2,15 @@ import PropTypes from 'prop-types';
 import * as Style from './ModalCss';
 import { ReactComponent as Close } from '../../assets/close.svg';
 
-export function Modal({ open, showCloseButton, onClose, children, ...props }) {
+export function Modal({ isOpen, showCloseButton, onClose, children, ...props }) {
+  const handleClickOutside = (e) => {
+    if (e.target === e.currentTarget) onClose();
+  };
+
   return (
-    <Style.ModalWrapper open={open}>
+    <Style.ModalWrapper isOpen={isOpen} onClick={handleClickOutside}>
+      {isOpen
+      && (
       <Style.Modal {...props}>
         {showCloseButton && (
         <Style.CloseButton onClick={onClose}>
@@ -13,6 +19,7 @@ export function Modal({ open, showCloseButton, onClose, children, ...props }) {
         )}
         {children}
       </Style.Modal>
+      )}
     </Style.ModalWrapper>
   );
 }
@@ -21,7 +28,11 @@ Modal.Header = Style.Header;
 Modal.Content = Style.Content;
 
 Modal.propTypes = {
-  open: PropTypes.bool,
+  isOpen: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   onClose: PropTypes.func,
+};
+
+Modal.defaultProps = {
+  showCloseButton: true,
 };

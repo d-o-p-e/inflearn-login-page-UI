@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useArgs } from '@storybook/client-api';
 import { Modal } from './Modal';
 import Input from '../Input/Input';
 import PasswordInput from '../Input/PasswordInput';
@@ -8,10 +9,30 @@ import { Button } from '../Button/Button';
 export default {
   title: 'Components/Modal',
   component: Modal,
+  argTypes: {
+    isOpen: {
+      control: 'boolean',
+    },
+    showCloseButton: {
+      control: 'boolean',
+    },
+  },
 };
 
 function Template(args) {
-  return <Modal {...args} />;
+  const [{ isOpen }, setOpen] = useArgs();
+  const ModalOpen = () => {
+    setOpen({ isOpen: true });
+  };
+  const ModalClose = () => {
+    setOpen({ isOpen: false });
+  };
+  return (
+    <div>
+      <Button onClick={ModalOpen}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={ModalClose} {...args} />
+    </div>
+  );
 }
 
 const Header = styled.h2`
@@ -20,7 +41,7 @@ const Header = styled.h2`
 
 export const LoginModal = Template.bind({});
 LoginModal.args = {
-  open: true,
+  isOpen: true,
   showCloseButton: true,
   children: (
     <>
@@ -50,5 +71,5 @@ LoginModal.args = {
 
 export const DefaultModal = Template.bind({});
 DefaultModal.args = {
-  open: true,
+  isOpen: true,
 };
