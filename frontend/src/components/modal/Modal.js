@@ -3,20 +3,20 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Style from './Styles';
 
-export function Modal({ status, onClose, footerContent, bodyContent, headerContent }) {
+export function Modal({ children, status, onClose, footerContent, title }) {
   return (
     <Style.Overlay status={status}>
       <Style.Modal>
         <Style.ModalHeader>
           <Style.HeaderContent>
-            {headerContent}
+            {title}
           </Style.HeaderContent>
           <Style.CloseButton onClick={onClose}>
             <FontAwesomeIcon icon={faClose} />
           </Style.CloseButton>
         </Style.ModalHeader>
         <Style.ModalBody>
-          {bodyContent}
+          {children}
         </Style.ModalBody>
         <Style.ModalFooter>
           {footerContent}
@@ -41,11 +41,7 @@ Modal.propTypes = {
    */
   footerContent: PropTypes.object,
   /**
-   * body의 내용
-   */
-  bodyContent: PropTypes.object,
-  /**
    * header의 내용
    */
-  headerContent: PropTypes.object,
+  title: PropTypes.string,
 };
