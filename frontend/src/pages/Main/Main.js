@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../../stories/Button/Button';
 import { Modal } from '../../stories/Modal/Modal';
-import { SocialAuthButton } from '../../stories/SocialAuthButton/SocialAuthButton';
 import Input from '../../stories/Input/Input';
 import PasswordInput from '../../stories/Input/PasswordInput';
 
@@ -32,19 +32,9 @@ function Main() {
         </Modal.Content>
       </Modal>
       <Button round="round" onClick={() => { setOpen(true); }}>로그인</Button>
-      <hr />
-      <form style={{ width: '500px' }}>
-        <h2>회원가입</h2>
-        <Input type="email" placeholder="example@inflab.com" label="이메일" />
-        <PasswordInput placeholder="******" label="비밀번호" />
-        <PasswordInput placeholder="******" label="비밀번호 확인" />
-        <Button color="primary" size="maxWidth" round="round">로그인</Button>
-      </form>
-      <SocialAuthButton icon="github" />
-      <SocialAuthButton icon="apple" />
-      <SocialAuthButton icon="google" />
-      <SocialAuthButton icon="facebook" />
-      <SocialAuthButton icon="kakaotalk" />
+      <Link to="/register">
+        <Button round="round">회원가입</Button>
+      </Link>
     </>
   );
 }
