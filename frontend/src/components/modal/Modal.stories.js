@@ -27,8 +27,8 @@ function Template(args) {
 export const PasswordModal = Template.bind({});
 PasswordModal.args = {
   status: true,
-  headerContent: (<div>예약시 사용하신 비밀번호를 입력해주세요</div>),
-  bodyContent: (<Input type="password" placeholder="비밀번호" />),
+  title: '예약시 사용하신 비밀번호를 입력해주세요',
+  children: (<Input type="password" width="100%" placeholder="비밀번호" />),
   footerContent: (
     <ButtonWrapper>
       <Button>취소</Button>
@@ -40,11 +40,11 @@ PasswordModal.args = {
 export const LongBodyModal = Template.bind({});
 LongBodyModal.args = {
   status: true,
-  headerContent: (<div>Ipsum Lorem</div>),
-  bodyContent: (
+  title: 'Ipsum Lorem',
+  children: (
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-      been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+      been the industrys standard dummy text ever since the 1500s, when an unknown printer took
       a galley of type and scrambled it to make a type specimen book. It has survived not only
       five centuries, but also the leap into electronic typesetting, remaining essentially
       unchanged. It was popularised in the 1960s with the release of Letraset sheets containing

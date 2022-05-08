@@ -6,7 +6,6 @@ export const PasswordIcon = styled(FontAwesomeIcon)`
 `;
 
 export const Section = styled.div`
-padding: 10px;
 `;
 
 export const Input = styled.input`
@@ -16,6 +15,7 @@ border: 1px solid #DEE2E6;
 border-radius: 4px;
 padding-left: 10px;
 padding-right: 20px;
+box-sizing: border-box;
 outline: none; //이거 때문에 focus시에 내가 원하던 색 적용이 안되었음
 &:focus{
     border-color: #00C471;
@@ -39,6 +39,7 @@ color: #3E406C;
 export const ErrorMessage = styled.span`
 display: block;
 padding: 0 0.25rem;
+margin-top: 5px;
 margin-bottom: 5px;
 font-size: 0.75rem;
 background-color: white;
