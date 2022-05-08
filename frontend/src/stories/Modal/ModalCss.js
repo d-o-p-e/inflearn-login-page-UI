@@ -34,6 +34,9 @@ export const CloseButton = styled.div`
   cursor: pointer;
 `;
 
-export const Header = styled.div``;
+export const Header = styled.div`
+  margin-top: 2rem;
+  text-align: center;
+`;
 export const Content = styled.div``;
 export const Footer = styled.div``;
