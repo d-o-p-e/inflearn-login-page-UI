@@ -1,42 +1,57 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '../../stories/Button/Button';
+import { SocialAuthButton } from '../../stories/SocialAuthButton/SocialAuthButton';
 import { Modal } from '../../stories/Modal/Modal';
-import Input from '../../stories/Input/Input';
 import PasswordInput from '../../stories/Input/PasswordInput';
+import { ReactComponent as Inflearn } from '../../assets/inflearnLogo.svg';
+import * as Style from './MainCss';
 
-function Main() {
+export default function Main() {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Modal isOpen={isOpen} onClose={() => { setOpen(false); }}>
         <Modal.Header>
-          <h2>로그인</h2>
+          <Inflearn width="40%" fill="#1dc078" />
         </Modal.Header>
         <Modal.Content>
-          <Input
+          <Style.EmailInput
             type="email"
-            label="이메일"
             placeholder="이메일"
           />
-          <PasswordInput
-            label="비밀번호"
-            placeholder="비밀번호"
-          />
+          <PasswordInput placeholder="비밀번호" />
           <Button
             size="maxWidth"
             round="round"
           >
             로그인
           </Button>
+          <Style.LinkAction>
+            <Style.CustomLink to="/">
+              비밀번호 찾기
+            </Style.CustomLink>
+            <span>|</span>
+            <Style.CustomLink to="/register" content="|">
+              회원가입
+            </Style.CustomLink>
+          </Style.LinkAction>
+          <Style.Footer>
+            <hr />
+            <span>간편 로그인</span>
+            <Style.SocialAuth>
+              <SocialAuthButton icon="kakaotalk" />
+              <SocialAuthButton icon="github" />
+              <SocialAuthButton icon="google" />
+              <SocialAuthButton icon="facebook" />
+              <SocialAuthButton icon="apple" />
+            </Style.SocialAuth>
+          </Style.Footer>
         </Modal.Content>
       </Modal>
       <Button round="round" onClick={() => { setOpen(true); }}>로그인</Button>
-      <Link to="/register">
+      <Style.CustomLink to="/register">
         <Button round="round">회원가입</Button>
-      </Link>
+      </Style.CustomLink>
     </>
   );
 }
-
-export default Main;
