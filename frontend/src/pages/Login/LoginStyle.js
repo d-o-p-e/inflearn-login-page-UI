@@ -10,6 +10,7 @@ export const LoginForm = styled.form`
   display: flex;
   align-content: center;
   flex-direction: column;
+  align-items: center;
   > * {
       margin-bottom: 12px;
   }
