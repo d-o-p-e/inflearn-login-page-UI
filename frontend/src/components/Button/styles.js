@@ -28,10 +28,10 @@ const colorCss = {
 };
 const roundCss = {
   default: css`
-  border-radius: 0.125rem;
+  border-radius: 0.5rem;
 `,
   round: css`
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 `,
 };
 
@@ -39,7 +39,7 @@ export const StoryBookButton = styled.button`
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
-  border-radius: 3em;
+  height: 48px;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
