@@ -24,7 +24,7 @@ outline: none; //이거 때문에 focus시에 내가 원하던 색 적용이 안
 ::placeholder{
     color: #D1D6DC;
 }
-${(width) => width};
+width:${({ width }) => width};
 `;
 
 export const Title = styled.span`
