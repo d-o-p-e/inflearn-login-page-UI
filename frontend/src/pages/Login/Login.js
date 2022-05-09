@@ -9,10 +9,14 @@ import { FindPassword, InflearnLogo, LoginForm, MoreAction, SignUp, SocialLogin,
 
 function Login() {
   const [loginStatus, setLoginStatus] = useState(false);
+  const toggleLoginModal = () => {
+    setLoginStatus((pre) => !pre);
+  };
   return (
     <>
-      <Button onClick={() => { setLoginStatus((pre) => !pre); }}>로그인하기</Button>
+      <Button onClick={toggleLoginModal}>로그인하기</Button>
       <Modal
+        onClose={toggleLoginModal}
         status={loginStatus}
         footerContent={(
           <SocialLogin>
