@@ -22,7 +22,7 @@ export const SocialLoginButton = styled.button`
   align-items: center;
   border: 0;
   border-radius: 4px;
-  box-shadow: 0 1px 2px 0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
   display: flex;
   height: 44px;
   justify-content: center;

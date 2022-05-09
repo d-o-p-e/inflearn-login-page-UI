@@ -38,7 +38,7 @@ function Login() {
         <LoginForm>
           <Input type="email" placeholder="이메일" />
           <Input type="password" placeholder="비밀번호" />
-          <Button>로그인</Button>
+          <Button width="300px">로그인</Button>
         </LoginForm>
         <MoreAction>
           <FindPassword>비밀번호 찾기</FindPassword>
