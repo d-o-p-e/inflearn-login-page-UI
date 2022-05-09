@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import * as Style from './components/Input/Input';
 import { Modal } from './components/modal/Modal';
+import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
   return (
     <div className="App">
       <SignUp />
+      <hr />
+      <Login />
     </div>
   );
 }
