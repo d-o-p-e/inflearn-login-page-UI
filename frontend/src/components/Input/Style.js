@@ -2,14 +2,16 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PasswordIcon = styled(FontAwesomeIcon)`
-    margin-left: -23px;
+    position: absolute;
+    margin-left: -24px;
+    margin-top: 16px;
 `;
 
 export const Section = styled.div`
 `;
 
 export const Input = styled.input`
-height: 32px;
+height: 48px;
 font-size: 15px;
 border: 1px solid #DEE2E6;
 border-radius: 4px;
